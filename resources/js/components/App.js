@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Hero from './Hero';
+import Menu from './Menu';
 
 
 function App() {
     return (
         <div>
             <Hero />
+            <Menu />
         </div>
     );
 }
