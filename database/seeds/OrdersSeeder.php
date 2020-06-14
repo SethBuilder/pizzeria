@@ -12,9 +12,7 @@ class OrdersSeeder extends Seeder
     public function run()
     {
         factory(App\Order::class, 15)->create()->each(function($order) {
-            for($i = 0; $i < 6; $i++) {
-                $order->pizzas()->save(factory(App\Pizza::class)->make());
-            }
+                $order->pizzas()->attach(App\Pizza::inRandomOrder()->limit(rand(1, 12))->pluck('id'));
         });
     }
 }

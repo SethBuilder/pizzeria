@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Pizza;
 use Illuminate\Http\Request;
+use App\Http\Resources\Pizza as PizzaResource;
 
 class PizzaController extends Controller
 {
@@ -14,7 +15,8 @@ class PizzaController extends Controller
      */
     public function index()
     {
-        //
+        return PizzaResource::collection(Pizza::all());
+        
     }
 
     /**

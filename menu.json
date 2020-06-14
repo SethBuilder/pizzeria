@@ -1,0 +1,65 @@
+{
+    "total": 10,
+    "data": [
+        {
+            "name": "Capricciosa Pizza",
+            "description": "Tomato sauce, mozzarella, oregano, salami, mushroom and black olives",
+            "price": 4.50,
+            "imageUrl": "https://uncutrecipes.com/Images-Recipes-Italian/Pizza-Capricciosa.jpg"
+        },
+        {
+            "name": "Verdure Pizza",
+            "description": "Tomato sauce, mozzarella, oregano, eggplant, zucchini, green peppers and mushrooms",
+            "price": 3.95,
+            "imageUrl": "https://www.italianfoodforever.com/wp-content/uploads/2008/05/veggiepizzaa-480x360.jpg"
+        },
+        {
+            "name": "Alfredo Pizza",
+            "description": "Chicken and mushroom Alfredo sauce, mozzarella and topped with Parmesan cheese",
+            "price": 5.20,
+            "imageUrl": "https://i.pinimg.com/originals/e2/e7/af/e2e7af7702e7ed75170041813641c57d.jpg"
+        },
+        {
+            "name": "Pepperoni Pizza",
+            "description": "Tomato sauce, mozzarella, oregano and pepperoni",
+            "price": 4.00,
+            "imageUrl": "https://www.moulinex-me.com/medias/?context=bWFzdGVyfHJvb3R8MTQzNTExfGltYWdlL2pwZWd8aDM2L2g1Mi8xMzA5NzI3MzI2MjExMC5qcGd8N2MxZDhmNmI5ZTgzZDZlZWQyZGQ4YjFlZjUyNDlkMTExYjdkZDdlZmFkY2I0N2NmNjljOGViNmExZjIyMDU4Yw"
+        },
+        {
+            "name": "Margherita Pizza",
+            "description": "Tomato sauce, mozzarella and oregano",
+            "price": 3.45,
+            "imageUrl": "https://www.yogurtinnutrition.com/wp-content/uploads/2015/10/yini-pizza-1620x800.jpg"
+        },
+        {
+            "name": "The Original Neapolitan",
+            "description": "Non-gmo double zero Neapolitan flour, water, sea salt, and yeast.",
+            "price": 10,
+            "imageUrl": "https://mymidici.com/devsite/wp-content/uploads/2016/11/menu-n.pizza-desktop.jpg"
+        },
+        {
+            "name": "Calzone",
+            "description": "Pizza turnover filled with ricotta and mozzarella cheese",
+            "price": 15,
+            "imageUrl": "https://i.pinimg.com/originals/e2/e7/af/e2e7af7702e7ed75170041813641c57d.jpg"
+        },
+        {
+            "name": "Sicilian Pizza",
+            "description": "Bacon, pepperoni, broccoli, spinach, raw onions, mushrooms, tomato, and black olives Sicilian pizza.",
+            "price": 18.99,
+            "imageUrl": "https://www.kingarthurflour.com/sites/default/files/styles/featured_image/public/2020-05/sicilian-style-pizza.jpg?itok=_uC895HO"
+        },
+        {
+            "name": "California Style",
+            "description": "Broccolini, eggplant, Cremini mushrooms, sun-dried tomatoes, roasted corn, red onions and Mozzarella",
+            "price": 10,
+            "imageUrl": "https://i2.wp.com/blog.slicelife.com/wp-content/uploads/2019/04/California-1.jpg?fit=1200%2C630&ssl=1"
+        },
+        {
+            "name": "Pizza Alla Napoletana",
+            "description": "Beautiful napeoleon pizza with a crunchy crust with mouth melting mozzerela.",
+            "imageUrl": "https://uncutrecipes.com/Images-Recipes-Italian/Pizza-alla-Napoletana-with-Mozzarella-Cheese.jpg",
+            "price": 10
+        }
+    ]
+}
