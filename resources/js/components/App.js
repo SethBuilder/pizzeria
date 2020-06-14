@@ -1,34 +1,24 @@
-import ReactDOM from 'react-dom';
-import Hero from './Hero';
-import Menu from './Menu';
+import Home from './Home';
+import Cart from './Cart';
 import React, { useState, useEffect } from 'react';
-import api from '../api/menu';
+import { Route, Switch } from 'react-router-dom'
 
 function App() {
-    const [pizzas, setPizzas] = useState([]);
     const [cartItems, setCartItems] = useState([]);
+
     useEffect(() => {
-        fetchFromAPI()
-    }, [cartItems])
-    async function fetchFromAPI() {
-        let { data: pizzas } = await api.get("", {
-            params: {
-                q: ''
-            }
-        })
-        console.log(pizzas);
-        setPizzas(pizzas.data)
-    }
+
+    }, [])
+
     return (
-        <div>
-            <Hero cartItems={cartItems} />
-            <Menu setCartItems={setCartItems} pizzas={pizzas} />
-        </div>
+        <>
+            <Switch>
+                <Route path="/" exact render={() => <Home cartItems={cartItems} setCartItems={setCartItems} />} />
+                <Route path="/cart" exact render={() => <Cart cartItems={cartItems}  />} />
+                <Route path="/" render={() => <div>404</div>} />
+            </Switch>
+        </>
     );
 }
 
 export default App;
-
-if (document.getElementById('root')) {
-    ReactDOM.render(<App />, document.getElementById('root'));
-}

@@ -3,6 +3,7 @@ import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Link } from 'react-router-dom'
 
 const StyledBadge = withStyles((theme) => ({
     badge: {
@@ -24,13 +25,13 @@ function Nav({ cartItems }) {
 
                 <div className="flex w-32 justify-between">
                     <div className="text-white w-1/2">
-                        <a href="#" className="hover:bg-pizza-red focus:bg-bg-pizza-red text-lg flex items-center justify-center block h-full w-full">
+                        <Link to="cart" className="hover:bg-pizza-red focus:bg-bg-pizza-red text-lg flex items-center justify-center block h-full w-full">
                             <IconButton aria-label="cart" color="inherit">
                                 <StyledBadge badgeContent={cartItems.length} color="secondary">
                                     <ShoppingCartIcon />
                                 </StyledBadge>
                             </IconButton>
-                        </a>
+                        </Link>
                     </div>
                     <button onClick={() => setIsOpen(isOpen => !isOpen)} type="button" className="sm:hidden m-1 block w-1/2 text-gray-500 hover:text-white focus:text-white">
                         <div className={isOpen ? '' : 'hidden'}><strong>X</strong></div>
