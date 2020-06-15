@@ -16,13 +16,15 @@ const StyledBadge = withStyles((theme) => ({
 
 function Nav({ cartItems, path }) {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     return (
-        
+
         <nav className={'z-50 sm:flex sm:justify-between sm:px-4 w-full ' + (path === '/' ? 'fixed' : '')} style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'saturate(180%) blur(20px)' }}>
             <div className="flex h-full justify-between px-4 sm:w-3/4">
-                <div className="flex h-16">
-                    <img className="self-center h-6 md:h-8" src="images/logo.svg" alt="pizzeria innoscripta logo" />
+                <div>
+                    <a className="flex h-16" href="/" title="homepage">
+                        <img className="self-center h-6 md:h-8" src="images/logo.svg" alt="pizzeria innoscripta logo" />
+                    </a>
                 </div>
                 <div className="flex w-32 justify-between">
                     <div className="text-white w-1/2">
@@ -43,8 +45,8 @@ function Nav({ cartItems, path }) {
                 </div>
             </div>
             <div className={isOpen ? '' : 'hidden' + ' sm:py-0 py-3 sm:flex'}>
-                <a className="flex items-center py-2 sm:py-0 px-4 block text-white font-semibold hover:bg-pizza-red" href="#">Menu</a>
-                <a className="flex items-center py-2 sm:py-0 mt-1 px-4 block text-white font-semibold hover:bg-pizza-red sm:mt-0 sm:ml-2" href="#">Login</a>
+                <a className="flex items-center py-2 sm:py-0 px-4 block text-white font-semibold hover:bg-pizza-red" href="/#menu">Menu</a>
+                <a title="coming soon" className="flex items-center py-2 sm:py-0 mt-1 px-4 block text-white font-semibold hover:bg-pizza-red sm:mt-0 sm:ml-2" href="#">Login</a>
             </div>
         </nav>
     );

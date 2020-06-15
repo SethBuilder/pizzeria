@@ -3,7 +3,7 @@ import MenuItem from './MenuItem';
 
 function Menu({ pizzas, setCartItems }) {
     return (
-        <div className="bg-gray-400 px-16 min-h-screen flex flex-col justify-center">
+        <div className="bg-gray-400 px-16 min-h-screen flex flex-col justify-center" id="menu">
             <h2 className="container  my-6 mx-auto content-center text-center text-black text-2xl md:text-3xl">
                 <span className="font-bold">Some Of Our <strong>Delicious</strong> Pizzas</span>
             </h2>

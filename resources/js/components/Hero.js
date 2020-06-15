@@ -9,10 +9,11 @@ function Hero({ cartItems }) {
             <h1 className="container z-10 mt-32 mx-auto content-center text-center text-white text-3xl md:text-5xl">
                 <span className="font-bold">Fresh, Delicious And Honest</span> <br />Food Served With Care
             </h1>
-            <button
-                className="z-10 bg-cta-red container mx-auto py-4 px-3 m-6 font-semibold uppercase tracking-wide w-40 text-white hover:text-cta-red rounded-sm hover:bg-white text-xl">
+            <a
+                href="/#menu"
+                className="text-center z-10 bg-cta-red container mx-auto py-4 px-3 m-6 font-semibold uppercase tracking-wide w-40 text-white hover:text-cta-red rounded-sm hover:bg-white text-xl">
                 order now
-            </button>
+            </a>
         </div>
     );
 }

@@ -18,10 +18,10 @@ function Hero({ orderStatus }) {
             className="bg-cover h-screen relative">
             <div className="z-0 absolute h-full w-full" style={{ backgroundColor: 'rgba(58,30,18, 0.29)' }}></div>
             {message}
-            {orderStatus.success && <button
-                className="z-10 bg-cta-red container mx-auto py-4 px-3 m-6 font-semibold uppercase tracking-wide w-40 text-white hover:text-cta-red rounded-sm hover:bg-white text-xl">
+            {orderStatus.success && <a href="/#menu"
+                className="z-10 bg-cta-red container mx-auto py-4 px-3 m-6 font-semibold uppercase tracking-wide text-center w-48 text-white hover:text-cta-red rounded-sm hover:bg-white text-xl">
                 order again
-            </button>}
+            </a>}
         </div>
     );
 }

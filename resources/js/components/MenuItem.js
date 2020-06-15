@@ -13,7 +13,7 @@ function MenuItem({ pizza, setCartItems }) {
         <div className="max-w-sm mb-8">
             <div className="relative pb-5/6 h-64">
                 <img className="absolute h-full w-full object-cover rounded-lg shadow-md" src={pizza.image}
-                    alt="TO DO" />
+                    alt={pizza.name} />
             </div>
             <div className="relative px-4 -mt-2">
                 <div className="bg-white p-6 rounded-lg shadow-lg">
