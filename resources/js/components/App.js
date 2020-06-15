@@ -19,7 +19,7 @@ function App() {
                 <Route path="/cart" exact render={() => orderStatus.processed ? <Confirmation orderStatus={orderStatus} />
                     : <Cart setOrderStatus={setOrderStatus} cartItems={cartItems} />} />
 
-                <Route path="/" render={() => <div><h1><small>404... </small>That's all we know</h1></div>} />
+                {/* <Route path="/" render={() => <div><h1><small>404... </small>That's all we know</h1></div>} /> */}
             </Switch>
             <Footer />
         </>
