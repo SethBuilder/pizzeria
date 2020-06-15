@@ -1,4 +1,4 @@
-<p align="center"><img style="background-color: black" src="https://pizzeria-seif.herokuapp.com/images/logo.svg" width="400"></p>
+<p align="center"><img src="https://drive.google.com/file/d/10bn-3YuVGhb2gJksbk_t9Tk9v-g2BCX1/view?usp=sharing" width="400"></p>
 
 ## About this project
 
