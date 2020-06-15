@@ -11,6 +11,6 @@ class Pizza extends Model implements HasMedia
     use InteractsWithMedia;
     
     public function orders() {
-        return $this->belongsToMany(Order::class);
+        return $this->belongsToMany(Order::class)->withTimestamps();
     }
 }

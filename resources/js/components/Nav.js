@@ -14,15 +14,16 @@ const StyledBadge = withStyles((theme) => ({
     },
 }))(Badge);
 
-function Nav({ cartItems }) {
+function Nav({ cartItems, path }) {
     const [isOpen, setIsOpen] = useState(false);
+    
     return (
-        <nav className="fixed z-50 sm:flex sm:justify-between sm:px-4 w-full" style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'saturate(180%) blur(20px)' }}>
+        
+        <nav className={'z-50 sm:flex sm:justify-between sm:px-4 w-full ' + (path === '/' ? 'fixed' : '')} style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'saturate(180%) blur(20px)' }}>
             <div className="flex h-full justify-between px-4 sm:w-3/4">
                 <div className="flex h-16">
                     <img className="self-center h-6 md:h-8" src="images/logo.svg" alt="pizzeria innoscripta logo" />
                 </div>
-
                 <div className="flex w-32 justify-between">
                     <div className="text-white w-1/2">
                         <Link to="cart" className="hover:bg-pizza-red focus:bg-bg-pizza-red text-lg flex items-center justify-center block h-full w-full">

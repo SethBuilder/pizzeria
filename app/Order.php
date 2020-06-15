@@ -5,15 +5,21 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
-{
+{    /**
+    * The attributes that are mass assignable.
+    *
+    * @var array
+    */
+   protected $fillable = ['firstName', 'lastName', 'address'];
+
     public function user() {
-        return $this->belongsTo(USer::class)->withDefault([
+        return $this->belongsTo(User::class)->withDefault([
             'name' => 'Guest Checkout'
         ]);
     }
 
     public function pizzas() {
-        return $this->belongsToMany(Pizza::class);
+        return $this->belongsToMany(Pizza::class)->withTimestamps();
     }
 
     public function totalEuro() {

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreOrder;
 use App\Order;
+use App\Pizza;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class OrderController extends Controller
 {
@@ -14,17 +17,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        //  TO DO: list logged in user order
     }
 
     /**
@@ -33,53 +26,28 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreOrder $request)
     {
-        //
-    }
+        $order = Order::create($request->validated());
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Order $order)
-    {
-        //
-    }
+        $items = json_decode($request->get('cartItems'));
+        $flattened = Arr::flatten($items);
+        $pizzaIds = [];
+        foreach ($flattened as $item) {
+            array_push($pizzaIds, Pizza::where('slug', $item->slug)->first()->id);
+        }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Order $order)
-    {
-        //
-    }
+        $order->pizzas()->attach($pizzaIds);
+        if ($order && $order->pizzas()->count()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'order processed',
+            ], 201);
+        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Order $order)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Order $order)
-    {
-        //
+        return response()->json([
+            'success' => false,
+            'message' => 'order failed',
+        ], 400);
     }
 }

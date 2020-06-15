@@ -1,7 +1,7 @@
 import Hero from './Hero';
 import Menu from './Menu';
 import React, { useState, useEffect } from 'react';
-import api from '../api/menu';
+import api from '../api/backend';
 
 function App({ cartItems, setCartItems }) {
     const [pizzas, setPizzas] = useState([]);
@@ -11,7 +11,7 @@ function App({ cartItems, setCartItems }) {
     }, [])
 
     async function fetchFromAPI() {
-        const { data: pizzas } = await api.get("")
+        const { data: pizzas } = await api.get("menu")
         setPizzas(pizzas.data)
     }
     return (

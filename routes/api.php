@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('menu', 'PizzaController@index')->name('menu');
+Route::post('place-order', 'OrderController@store')->name('place-order');
