@@ -7,6 +7,7 @@ use App\Order;
 use App\Pizza;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use App\Http\Resources\Order as OrderResource;
 
 class OrderController extends Controller
 {
@@ -41,13 +42,14 @@ class OrderController extends Controller
         if ($order && $order->pizzas()->count()) {
             return response()->json([
                 'success' => true,
-                'message' => 'order processed',
+                'message' => 'order processed successfully',
+                'order' => new OrderResource($order),
             ], 201);
         }
 
         return response()->json([
             'success' => false,
-            'message' => 'order failed',
+            'message' => 'cart is empty',
         ], 400);
     }
 }
